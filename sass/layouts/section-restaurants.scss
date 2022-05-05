@@ -1,0 +1,97 @@
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    background-color: lighten($background,95%);
+    padding-bottom: 7rem;
+
+    & h3 {
+        padding-left: 1rem;
+        @media (min-width: 767px) {
+            text-align: center;
+        }
+    }
+}
+
+.restaurants-cards {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; // ou center? //
+    gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    @media (max-width: 767px) {
+        justify-content: flex-start;
+    }
+    & a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.card {
+    border-radius: 25px;
+    height: 14.5rem;
+    width: 23rem;
+    background-color: white;
+    @include border-shadows;
+    @media (min-width: 767px) {
+        width: 40rem;
+    }
+
+    & img {
+        object-fit: cover;
+        height: 10rem;
+        width: 100%;
+        border-radius: 25px 25px 0 0;
+    }
+
+    & h4 {
+        margin-top: 0.5rem;
+        padding-left: 1rem;
+    }
+
+    & p {
+        margin-top: -1rem;
+        padding-left: 1rem;
+    }
+}
+
+// .like {
+//     position: relative;
+//     font-size:x-large ;
+//     bottom: 3rem;
+//     left: 20rem;
+// }
+
+.badge-new {
+    position: relative;
+
+    & ::before {
+        content: "Nouveau";
+        color:  darken($color-tertiary,50%);
+        position: absolute;
+        background-color: $color-tertiary;
+        height: 2rem;
+        width: 5rem;
+        right: 1rem;
+        top: 1rem;
+        font-family: "Roboto",sans-serif;
+        display: grid;
+        place-items: center;
+    }
+}
+
+.like-hover {
+    color: transparent;
+    background-image: linear-gradient(to top, $color-primary,
+    $color-secondary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0;
+    transition: 500ms ease-in-out;
+        
+    & :hover {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: white;
+}
+
+header {
+  position: relative;
+  font-family: "shrikhand", cursive;
+  text-align: center;
+  margin-top: -1rem;
+  background-color: white;
+}
+
+.fa-arrow-left {
+  position: relative;
+  font-size: 1.5rem;
+  right: 0;
+  left: -13rem;
+  top: 3.8rem;
+  text-align: center;
+  color: black;
+}
+@media (max-width: 455px) {
+  .fa-arrow-left {
+    left: -8rem;
+  }
+}
+
+.city-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: -13px;
+  height: 60px;
+  text-align: center;
+  background-color: #e6e6e6;
+  box-shadow: 0px -4px 5px 0px #cccccc;
+}
+.city-search h2 {
+  font-weight: 500;
+}
+.city-search i {
+  font-size: 1.5rem;
+}
+
+.introduction {
+  text-align: center;
+  background-color: #f2f2f2;
+  margin-top: -2rem;
+}
+.introduction h3 {
+  font-size: 2rem;
+  padding-top: 3rem;
+}
+.introduction p {
+  font-size: 1.5rem;
+}
+.introduction button {
+  margin-top: 2rem;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  transition: transform 500ms;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 3rem;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.introduction button:hover {
+  transform: scale(1.05);
+  box-shadow: 0.4rem 0.4rem 10px rgba(0, 0, 0, 0.4);
+  opacity: 80%;
+}
+
+.instructions {
+  counter-reset: numbers-steps;
+}
+.instructions h3 {
+  padding: 0 1rem;
+  margin-top: 3rem;
+}
+@media (min-width: 767px) {
+  .instructions h3 {
+    text-align: center;
+    margin-left: 1rem;
+  }
+}
+.instructions ol {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+@media (max-width: 650px) {
+  .instructions ol {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}
+.instructions ol .full-color {
+  background-color: #f2eafb;
+}
+.instructions li {
+  align-items: center;
+  flex-basis: 32%;
+  list-style-type: none;
+  background-color: #f2f2f2;
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  margin-right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.instructions li::before {
+  content: counter(numbers-steps);
+  counter-increment: numbers-steps;
+  color: white;
+  background-color: #9356DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 2rem;
+  min-height: 2rem;
+  width: 2rem;
+  min-width: 2rem;
+  position: relative;
+  left: -2rem;
+}
+.instructions i {
+  color: gray;
+  margin-left: -2rem;
+}
+.instructions .fa-store {
+  color: #9356DC;
+}
+.instructions a {
+  text-decoration: none;
+  color: black;
+}
+
+.full-color {
+  background-color: aqua;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  padding-bottom: 7rem;
+}
+.restaurants h3 {
+  padding-left: 1rem;
+}
+@media (min-width: 767px) {
+  .restaurants h3 {
+    text-align: center;
+  }
+}
+
+.restaurants-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+@media (max-width: 767px) {
+  .restaurants-cards {
+    justify-content: flex-start;
+  }
+}
+.restaurants-cards a {
+  text-decoration: none;
+  color: black;
+}
+
+.card {
+  border-radius: 25px;
+  height: 14.5rem;
+  width: 23rem;
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 767px) {
+  .card {
+    width: 40rem;
+  }
+}
+.card img {
+  object-fit: cover;
+  height: 10rem;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+}
+.card h4 {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+.card p {
+  margin-top: -1rem;
+  padding-left: 1rem;
+}
+
+.badge-new {
+  position: relative;
+}
+.badge-new ::before {
+  content: "Nouveau";
+  color: #1b6150;
+  position: absolute;
+  background-color: #99E2D0;
+  height: 2rem;
+  width: 5rem;
+  right: 1rem;
+  top: 1rem;
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.like-hover {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  transition: 500ms ease-in-out;
+}
+.like-hover :hover {
+  opacity: 1;
+}
+
+footer {
+  background-color: #333333;
+  color: white;
+  padding-left: 1rem;
+  margin-top: -2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.bold {
+  font-family: "shrikhand", cursive;
+  font-size: 1.5rem;
+}
+
+.bottom-information {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: -1.5rem;
+}
+
+.fa-hands-helping:before, .fa-handshake-angle:before {
+  content: "\f4c4";
+  margin-right: -0.3rem;
+  font-size: 0.9rem;
+}
+
+.banner img {
+  max-width: 100%;
+  max-height: 25%;
+  object-fit: cover;
+  margin-top: -1rem;
+  z-index: 1;
+}
+
+.restaurant-title {
+  background-color: red;
+  border-radius: 25px 25px 0 0;
+  z-index: 3;
+}
+.restaurant-title h2 {
+  font-family: "shrikhand", cursive;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main h3 {
+  font-weight: lighter;
+  position: relative;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.main h3::after {
+  content: "";
+  position: absolute;
+  background-color: #99E2D0;
+  height: 0.2rem;
+  width: 3rem;
+  left: 0rem;
+  top: 1.8rem;
+}
+
+.main-card {
+  background-color: aquamarine;
+  border-radius: 1rem;
+  position: relative;
+  height: 4.5rem;
+  width: 100%;
+}
+.main-card h4 {
+  margin-top: 1rem;
+  margin-bottom: -0.5rem;
+  padding-left: 0.5rem;
+}
+.main-card p {
+  margin-bottom: -0.5rem;
+  padding-left: 0.5rem;
+}
+.main-card .price {
+  position: absolute;
+  left: 21rem;
+  bottom: 0.7rem;
+  max-width: 1.5rem;
+  font-weight: bold;
+}
+
+.command {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.command button {
+  margin-top: 2rem;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  transition: transform 500ms;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 3rem;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.command:hover {
+  transform: scale(1.05);
+  box-shadow: 0.4rem 0.4rem 10px rgba(0, 0, 0, 0.4);
+  opacity: 80%;
+}
+
+.loader {
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 1rem), #99E2D0 0);
+  mask: radial-gradient(farthest-side, rgba(255, 0, 0, 0) calc(100% - 1rem), #99E2D0 0);
+  border-radius: 50%;
+  position: fixed;
+  inset: calc(50% - 50px);
+  animation: rot 2s linear infinite;
+}
+
+@keyframes rot {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,53 @@
+@mixin border-shadows {
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+@mixin border-shadows-hover {
+    box-shadow: 0.40rem 0.40rem 10px rgb(0 0 0 / 40%);
+}
+
+@mixin pop-up {
+    transform: scale(1.05);
+}
+
+@mixin pop-up-color {
+    opacity: 80%;
+}
+
+@mixin timepop {
+    transition: transform 500ms;
+}
+
+$color-primary: #9356DC;
+
+$color-secondary: #FF79DA;
+
+$color-tertiary: #99E2D0;
+
+$background: black;
+
+@mixin gradient-button {
+    margin-top: 2rem;
+    color: white;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    background-image: linear-gradient(to top, $color-primary,
+    $color-secondary);
+    @include timepop;
+    @include border-shadows;
+    margin-bottom: 3rem;
+}
+
+@mixin title-underline {
+    content: "";
+        position: absolute;
+        background-color: $color-tertiary;
+        height: 0.2rem;
+        width: 3rem;
+        left: 0rem;
+        top: 1.8rem;
+}

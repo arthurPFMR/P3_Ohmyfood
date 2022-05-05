@@ -1,0 +1,93 @@
+.banner {
+    & img {
+    max-width: 100%;
+    max-height: 25%;
+    object-fit: cover;
+    margin-top: -1rem;
+    z-index: 1;
+    }
+}
+
+.restaurant-title {
+    // background-color: lighten($background,95);
+    background-color: red;
+    border-radius: 25px 25px 0 0;
+    z-index: 3;
+    // margin-top: -5rem;
+
+& h2 {
+    font-family: "shrikhand", cursive;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-radius: 1rem 1rem 0 0;
+    // margin-top: -5rem;
+    }
+}
+
+.main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    & h3 {
+        font-weight: lighter;
+        position: relative;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+    & h3::after {
+        @include title-underline;
+    }
+    
+}
+
+.main-card {
+    background-color: aquamarine;
+    border-radius: 1rem;
+    position: relative;
+    height: 4.5rem;
+    width: 100%;
+    & h4 {
+        margin-top: 1rem;
+        margin-bottom: -0.5rem;
+        padding-left: 0.5rem;
+    }
+    & p {
+        margin-bottom: -0.5rem;
+        padding-left: 0.5rem;
+    }
+    & .price {
+        position: absolute;
+        left: 21rem;
+        bottom: 0.7rem;
+        max-width: 1.5rem;
+        font-weight: bold;
+    }
+    // & .price::before {
+    //     content: "";
+    //     position: absolute;
+    //     right: 21rem;
+    //     bottom: 0.7rem;
+    // }
+}
+
+.command {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    & button {
+    @include gradient-button;
+    @include border-shadows;
+    }
+    &:hover {
+        @include pop-up;
+        @include border-shadows-hover;
+        @include pop-up-color;
+    }
+}
+
+// footer {
+//     margin-top: -2rem;
+// }

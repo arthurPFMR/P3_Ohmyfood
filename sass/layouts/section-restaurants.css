@@ -1,0 +1,63 @@
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  padding-bottom: 4rem;
+}
+
+.restaurants h3 {
+  padding-left: 1rem;
+}
+
+.restaurants-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card {
+  border-radius: 25px;
+  height: 14.5rem;
+  width: 23rem;
+  background-color: white;
+}
+
+.card img {
+  object-fit: cover;
+  height: 10rem;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+}
+
+.card h4 {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.card p {
+  margin-top: -1rem;
+  padding-left: 1rem;
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+}
+
+.badge-new {
+  position: relative;
+}
+
+.badge-new ::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: aquamarine;
+  height: 2rem;
+  width: 5rem;
+  right: 1rem;
+  top: 1rem;
+  display: grid;
+  place-items: center;
+}
+/*# sourceMappingURL=section-restaurants.css.map */

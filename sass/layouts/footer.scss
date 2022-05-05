@@ -1,0 +1,36 @@
+footer {
+    background-color: lighten($background,20%);
+    color: white;
+    padding-left: 1rem;
+    margin-top: -2rem;
+    // margin-bottom: -2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    & a{
+        text-decoration: none;
+        color: white;
+    }
+
+    & a:hover {
+        text-decoration:underline;
+    }
+}
+
+.bold {
+    font-family: "shrikhand", cursive;
+    font-size: 1.5rem;
+}
+
+.bottom-information {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: -1.5rem;
+}
+
+.fa-hands-helping:before, .fa-handshake-angle:before {
+    content: "\f4c4";
+    margin-right: -0.3rem;
+    font-size: 0.9rem;
+}

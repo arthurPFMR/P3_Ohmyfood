@@ -26,12 +26,12 @@
 .header-menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 3rem;
+    margin-left: -5rem;
     & .fa-arrow-left {
         color: black;
         font-size: 1.5rem;
-        padding-left: 1rem;
     }
 }

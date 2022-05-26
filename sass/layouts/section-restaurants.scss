@@ -87,11 +87,16 @@
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+    position: relative;
     & i {
         font-size: larger;
         padding-right: 2rem;
     }
 }
+
+// .fa-heart {
+//     position: relative;
+// }
 
 .heart-hover {
     color: transparent;
@@ -99,24 +104,27 @@
     $color-secondary);
     -webkit-background-clip: text;
     background-clip: text;
-    font-size: large;
-    opacity: 1;
-    transition: 500ms ease-in-out;
-&:hover {
-    opacity: 1;
-}
-}
-
-.like-hover {
-    color: transparent;
-    background-image: linear-gradient(to top, $color-primary,
-    $color-secondary);
-    -webkit-background-clip: text;
-    background-clip: text;
+    font-size: 1rem;
     opacity: 0;
     transition: 500ms ease-in-out;
-        
+    position:absolute;
+    right: 0rem;
+    bottom: 1.95rem;  
     &:hover {
-        opacity: 1;
+    opacity: 1;
     }
 }
+
+// .like-hover {
+//     color: transparent;
+//     background-image: linear-gradient(to top, $color-primary,
+//     $color-secondary);
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     opacity: 0;
+//     transition: 500ms ease-in-out;
+        
+//     &:hover {
+//         opacity: 1;
+//     }
+// }

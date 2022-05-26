@@ -1,26 +1,16 @@
-// .loader {
-//     background:linear-gradient($color-primary, $color-secondary);
-//     -webkit-mask:radial-gradient(farthest-side,rgba(0, 0, 0, 0) calc(100% - 1rem),$color-tertiary 0);
-//             mask:radial-gradient(farthest-side,rgba(255, 0, 0, 0) calc(100% - 1rem),$color-tertiary 0);
-//     border-radius: 50%;  
-//     position: fixed;
-//     inset : calc(50% - 50px);
-//     animation: rot 2s linear infinite; 
-//   }
+
+.loader {
+    background:linear-gradient($color-primary, $color-secondary);
+    -webkit-mask:radial-gradient(farthest-side,rgba(0, 0, 0, 0) calc(100% - 1rem),$color-tertiary 0);
+            mask:radial-gradient(farthest-side,rgba(255, 0, 0, 0) calc(100% - 1rem),$color-tertiary 0);
+    border-radius: 50%;  
+    position: fixed;
+    inset : calc(50% - 50px);
+    animation: rotate 2s linear infinite;
+    z-index: 999; 
+
+  }
   
-//   @keyframes rot {
-//      100% { transform: rotate(360deg); }
-//   }
-
-
-// .tittle-loader {
-//     font-family: "shrikhand", cursive;
-//     color: $color-tertiary;
-//     position: fixed;
-//     font-size: 2rem;
-//     top: 35rem;
-//     bottom: 0;
-//     right: 0rem;
-//     left: 0rem;
-//     z-index: 1;
-// }
+  @keyframes rotate {
+     100% { transform: rotate(360deg); }
+  }

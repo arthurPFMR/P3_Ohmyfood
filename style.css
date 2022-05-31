@@ -567,20 +567,66 @@ footer a:hover {
 .font-loader {
   position: fixed;
   inset: 0;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   opacity: 0.93;
   z-index: 1;
   height: 100vh;
   animation: depop 3s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .font-loader .loader {
-  background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 1rem), #99E2D0 0);
-  mask: radial-gradient(farthest-side, rgba(255, 0, 0, 0) calc(100% - 1rem), #99E2D0 0);
-  border-radius: 50%;
   position: fixed;
   inset: calc(50% - 50px);
-  animation: rotation 2s linear infinite;
+}
+.font-loader .loader #ballsWaveG {
+  display: flex;
+  align-items: center;
+}
+.font-loader .loader .ballsWaveG {
+  background-color: #99E2D0;
+  width: 1rem;
+  height: 2.5rem;
+  animation-name: ballsWaveG;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  border-radius: 1rem;
+}
+.font-loader .loader div#ballsWaveG > .ballsWaveG:nth-child(even) {
+  margin: 0px 5px;
+}
+.font-loader .loader #ballsWaveG_1 {
+  animation-delay: 0.68s;
+}
+.font-loader .loader #ballsWaveG_2 {
+  animation-delay: 0.85s;
+}
+.font-loader .loader #ballsWaveG_3 {
+  animation-delay: 1.02s;
+}
+.font-loader .loader #ballsWaveG_4 {
+  animation-delay: 1.19s;
+}
+.font-loader .loader #ballsWaveG_5 {
+  animation-delay: 1.36s;
+}
+.font-loader .loader #ballsWaveG_6 {
+  animation-delay: 1.53s;
+}
+.font-loader .loader #ballsWaveG_7 {
+  animation-delay: 1.7s;
+}
+.font-loader .loader #ballsWaveG_8 {
+  animation-delay: 1.87s;
+}
+@keyframes ballsWaveG {
+  0% {
+    background-color: #9356DC;
+  }
+  100% {
+    background-color: #FF79DA;
+  }
 }
 
 @keyframes depop {
@@ -588,18 +634,11 @@ footer a:hover {
     visibility: hidden;
   }
 }
-@keyframes rotation {
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .loader-title {
-  position: fixed;
   font-family: "shrikhand", cursive;
   font-size: 2rem;
   color: #71d7be;
-  top: 55vh;
-  right: 42vw;
+  margin-top: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

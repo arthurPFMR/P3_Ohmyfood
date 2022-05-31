@@ -1,26 +1,37 @@
-// .loader {
-//     background:linear-gradient($color-primary, $color-secondary);
-//     -webkit-mask:radial-gradient(farthest-side,rgba(0, 0, 0, 0) calc(100% - 1rem),$color-tertiary 0);
-//             mask:radial-gradient(farthest-side,rgba(255, 0, 0, 0) calc(100% - 1rem),$color-tertiary 0);
-//     border-radius: 50%;  
-//     position: fixed;
-//     inset : calc(50% - 50px);
-//     animation: rot 2s linear infinite; 
-//   }
-  
-//   @keyframes rot {
-//      100% { transform: rotate(360deg); }
-//   }
+.font-loader {
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    opacity: 0.93;
+    z-index: 1;
+    height: 100vh;
+    animation: depop 3s forwards;
+    & .loader {
+        background:linear-gradient($color-primary, $color-secondary);
+        -webkit-mask:radial-gradient(farthest-side,rgba(0, 0, 0, 0) calc(100% - 1rem),$color-tertiary 0);
+            mask:radial-gradient(farthest-side,rgba(255, 0, 0, 0) calc(100% - 1rem),$color-tertiary 0);
+        border-radius: 50%;  
+        position: fixed;
+        inset : calc(50% - 50px);
+        animation: rotation 2s linear infinite;
+    }
+}
 
+@keyframes depop {
+    to {
+        visibility: hidden;
+    }
+}
 
-// .tittle-loader {
-//     font-family: "shrikhand", cursive;
-//     color: $color-tertiary;
-//     position: fixed;
-//     font-size: 2rem;
-//     top: 35rem;
-//     bottom: 0;
-//     right: 0rem;
-//     left: 0rem;
-//     z-index: 1;
-// }
+@keyframes rotation {
+    100% { transform: rotate(360deg); }
+}
+
+.loader-title {
+    position: fixed;
+    font-family: "shrikhand", cursive;
+    font-size: 2rem;
+    color: darken($color-tertiary, 10%);
+    top: 55vh;
+    right: 42vw;
+}

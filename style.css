@@ -11,10 +11,25 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  max-width: 70rem;
+  margin: auto;
+}
+@media (min-width: 767px) {
+  body {
+    background-color: rgb(235, 235, 235);
+  }
+}
+
 h1 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   background-color: white;
+}
+@media (min-width: 767px) {
+  h1 {
+    background-color: rgb(235, 235, 235);
+  }
 }
 
 header {
@@ -23,6 +38,21 @@ header {
   text-align: center;
   margin-top: -1rem;
   background-color: white;
+}
+@media (min-width: 767px) {
+  header {
+    background-color: rgb(235, 235, 235);
+  }
+}
+
+body {
+  max-width: 70rem;
+  margin: auto;
+}
+@media (min-width: 767px) {
+  body {
+    background-color: rgb(235, 235, 235);
+  }
 }
 
 .city-search {
@@ -252,7 +282,7 @@ header {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: 1rem;
+  font-size: 1.005rem;
   opacity: 0;
   transition: 500ms ease-in-out;
   position: absolute;
@@ -310,8 +340,32 @@ footer a:hover {
   padding-left: 1rem;
 }
 
-.banner {
+.banner-one {
   background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  height: 40vh;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 2rem;
+}
+
+.banner-two {
+  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  height: 40vh;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 2rem;
+}
+
+.banner-three {
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  height: 40vh;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 2rem;
+}
+
+.banner-four {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   height: 40vh;
   background-position: center;
   background-size: cover;
@@ -388,6 +442,10 @@ footer a:hover {
   opacity: 0;
   animation: transition 0.2s ease-in-out 2.1s forwards;
 }
+.main .delay-09 {
+  opacity: 0;
+  animation: transition 0.2s ease-in-out 2.3s forwards;
+}
 @media (min-width: 767px) {
   .main {
     flex-direction: row;
@@ -418,28 +476,30 @@ footer a:hover {
   border-radius: 0.75rem;
   margin: 1rem 0;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   cursor: pointer;
-  max-width: 100%;
   height: 4.5rem;
 }
-@media (min-width: 1140px) {
+@media (min-width: 767px) {
   .main-card {
-    min-width: 20rem;
+    max-width: 15rem;
   }
 }
 .main-card .info-card {
   flex: 1;
   margin-top: -1.5rem;
-}
-.main-card .info-card .description-card {
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+}
+.main-card .info-card .descriptions-card {
   margin-top: -1rem;
-  margin-left: -1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main-card .info-card .title-card {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main-card .price {
   font-weight: 700;
@@ -474,7 +534,7 @@ footer a:hover {
 
 .main-card:hover .fa-check {
   transform: rotate(360deg);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 
 .command {
@@ -502,6 +562,44 @@ footer a:hover {
   transform: scale(1.05);
   box-shadow: 0.4rem 0.4rem 10px rgba(0, 0, 0, 0.4);
   opacity: 80%;
+}
+
+.font-loader {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  opacity: 0.93;
+  z-index: 1;
+  height: 100vh;
+  animation: depop 3s forwards;
+}
+.font-loader .loader {
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 1rem), #99E2D0 0);
+  mask: radial-gradient(farthest-side, rgba(255, 0, 0, 0) calc(100% - 1rem), #99E2D0 0);
+  border-radius: 50%;
+  position: fixed;
+  inset: calc(50% - 50px);
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes depop {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader-title {
+  position: fixed;
+  font-family: "shrikhand", cursive;
+  font-size: 2rem;
+  color: #71d7be;
+  top: 55vh;
+  right: 42vw;
 }
 
 /*# sourceMappingURL=style.css.map */

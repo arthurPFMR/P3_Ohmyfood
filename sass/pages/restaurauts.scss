@@ -1,9 +1,21 @@
-.banner {
+.banner-one {
     background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    height: 40vh;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 2rem;
+    @include banner;
+}
+
+.banner-two {
+    background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    @include banner;
+}
+
+.banner-three {
+    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    @include banner;
+}
+
+.banner-four {
+    background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    @include banner;
 }
 
 .restaurant-title {
@@ -19,11 +31,8 @@
     }
     & h2 {
         font-family: "shrikhand", cursive;
-        // padding-top: 1rem;
-        // padding-bottom: 1rem;
         text-align: center;
         border-radius: 1rem 1rem 0 0;
-        // margin-top: -5rem;
     }
 }
 
@@ -58,24 +67,29 @@
     border-radius: .75rem;
     margin: 1rem 0;
     box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, .1);
-    white-space: nowrap;
+    // white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     cursor: pointer;
-    max-width: 100%;
+    // max-width: 980px;
     height: 4.5rem;
-    @media (min-width: 1140px){
-        min-width: 20rem;
+    @media (min-width: 767px){
+        max-width: 15rem;
     }
     & .info-card {
         flex: 1; //pas compris//
         margin-top: -1.5rem;
-        & .description-card {
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+        // white-space: nowrap;
+        overflow: hidden;
+        & .descriptions-card {
             margin-top: -1rem;
-            margin-left: -1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        & .title-card {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
     & .price {
@@ -83,7 +97,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        padding-left: .5rem
+        padding-left: 0.5rem;
     }
     & .check {
         background-color: $color-tertiary;
@@ -112,7 +126,7 @@
 
 .main-card:hover .fa-check {
     transform: rotate(360deg);
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 
 .command {

@@ -68,6 +68,7 @@ body {
 }
 .city-search h2 {
   font-weight: 500;
+  font-size: 1.3rem;
 }
 .city-search i {
   font-size: 1.5rem;
@@ -77,20 +78,23 @@ body {
   text-align: center;
   background-color: #f2f2f2;
   margin-top: -2rem;
+  width: 100%;
 }
 .introduction h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding-top: 3rem;
 }
 .introduction p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .introduction button {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: white;
   cursor: pointer;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
@@ -215,7 +219,6 @@ body {
 
 .card {
   border-radius: 25px;
-  height: 14.5rem;
   width: 23rem;
   background-color: white;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
@@ -312,6 +315,7 @@ footer a:hover {
 .bold {
   font-family: "shrikhand", cursive;
   font-size: 1.5rem;
+  margin-top: -0.5rem;
 }
 
 .bottom-information {
@@ -319,6 +323,7 @@ footer a:hover {
   align-items: center;
   gap: 1rem;
   margin-bottom: -1.5rem;
+  margin-top: -1rem;
 }
 
 .fa-hands-helping:before, .fa-handshake-angle:before {
@@ -333,6 +338,13 @@ footer a:hover {
   justify-content: flex-start;
   align-items: center;
   gap: 5rem;
+}
+@media (min-width: 767px) {
+  .header-menu {
+    justify-content: center;
+    gap: 17rem;
+    margin-left: -20rem;
+  }
 }
 .header-menu .fa-arrow-left {
   color: black;
@@ -380,14 +392,31 @@ footer a:hover {
   padding: 0 2rem;
   background-color: #f2f2f2;
   border-radius: 25px 25px 0 0;
+  position: relative;
 }
 .restaurant-title i {
   font-size: x-large;
+  position: absolute;
+  right: 1rem;
 }
 .restaurant-title h2 {
   font-family: "shrikhand", cursive;
   text-align: center;
   border-radius: 1rem 1rem 0 0;
+}
+
+.heart-hover-menu {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: 500ms ease-in-out;
+  position: absolute;
+  right: 0rem;
+  bottom: 1.6rem;
+}
+.heart-hover-menu:hover {
+  opacity: 1;
 }
 
 .main {
@@ -544,11 +573,11 @@ footer a:hover {
   padding-bottom: 3rem;
 }
 .command button {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: white;
   cursor: pointer;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
@@ -580,47 +609,47 @@ footer a:hover {
   position: fixed;
   inset: calc(50% - 50px);
 }
-.font-loader .loader #ballsWaveG {
+.font-loader .loader #ballsWave {
   display: flex;
   align-items: center;
 }
-.font-loader .loader .ballsWaveG {
+.font-loader .loader .ballsWave {
   background-color: #99E2D0;
   width: 1rem;
   height: 2.5rem;
-  animation-name: ballsWaveG;
+  animation-name: ballsWave;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   border-radius: 1rem;
 }
-.font-loader .loader div#ballsWaveG > .ballsWaveG:nth-child(even) {
-  margin: 0px 5px;
+.font-loader .loader div#ballsWave > .ballsWave:nth-child(even) {
+  margin: 5px;
 }
-.font-loader .loader #ballsWaveG_1 {
+.font-loader .loader #ballsWave_1 {
   animation-delay: 0.68s;
 }
-.font-loader .loader #ballsWaveG_2 {
+.font-loader .loader #ballsWave_2 {
   animation-delay: 0.85s;
 }
-.font-loader .loader #ballsWaveG_3 {
+.font-loader .loader #ballsWave_3 {
   animation-delay: 1.02s;
 }
-.font-loader .loader #ballsWaveG_4 {
+.font-loader .loader #ballsWave_4 {
   animation-delay: 1.19s;
 }
-.font-loader .loader #ballsWaveG_5 {
+.font-loader .loader #ballsWave_5 {
   animation-delay: 1.36s;
 }
-.font-loader .loader #ballsWaveG_6 {
+.font-loader .loader #ballsWave_6 {
   animation-delay: 1.53s;
 }
-.font-loader .loader #ballsWaveG_7 {
+.font-loader .loader #ballsWave_7 {
   animation-delay: 1.7s;
 }
-.font-loader .loader #ballsWaveG_8 {
+.font-loader .loader #ballsWave_8 {
   animation-delay: 1.87s;
 }
-@keyframes ballsWaveG {
+@keyframes ballsWave {
   0% {
     background-color: #9356DC;
   }
@@ -628,12 +657,12 @@ footer a:hover {
     background-color: #FF79DA;
   }
 }
-
 @keyframes depop {
   to {
     visibility: hidden;
   }
 }
+
 .loader-title {
   font-family: "shrikhand", cursive;
   font-size: 2rem;

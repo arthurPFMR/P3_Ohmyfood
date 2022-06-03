@@ -13,6 +13,7 @@
 
 & h2 {
         font-weight: 500;
+        font-size: 1.3rem;
 }
 & i {
         font-size: 1.5rem;
@@ -23,12 +24,15 @@
     text-align: center;
     background-color: lighten($background,95%);
     margin-top: -2rem;
+    width: 100%;
 & h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding-top: 3rem;
 }
 & p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 & button {
     @include gradient-button;

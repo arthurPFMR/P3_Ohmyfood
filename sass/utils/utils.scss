@@ -1,11 +1,19 @@
 body {
     max-width: 70rem;
-    // z-index: 1;
     margin: auto;
-    @media (min-width: 767px) { 
+
+    @media (min-width: 767px) {
         background-color: rgb(235, 235, 235);
+    }
 }
-}
+
+$color-primary: #9356DC;
+
+$color-secondary: #FF79DA;
+
+$color-tertiary: #99E2D0;
+
+$background: black;
 
 @mixin border-shadows {
     box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
@@ -27,25 +35,18 @@ body {
     transition: transform 500ms;
 }
 
-$color-primary: #9356DC;
-
-$color-secondary: #FF79DA;
-
-$color-tertiary: #99E2D0;
-
-$background: black;
 
 @mixin gradient-button {
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: white;
     cursor: pointer;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 1rem 2rem;
     border: none;
     border-radius: 2rem;
     background-image: linear-gradient(to top, $color-primary,
-    $color-secondary);
+            $color-secondary);
     @include timepop;
     @include border-shadows;
     margin-bottom: 3rem;
@@ -53,29 +54,74 @@ $background: black;
 
 @mixin title-underline {
     content: "";
-        position: absolute;
-        background-color: $color-tertiary;
-        height: 0.2rem;
-        width: 3rem;
-        left: 0rem;
-        top: 1.8rem;
+    position: absolute;
+    background-color: $color-tertiary;
+    height: 0.2rem;
+    width: 3rem;
+    left: 0rem;
+    top: 1.8rem;
 }
 
 @mixin animation-main {
-@keyframes transition {
-    0%   { opacity:0; }
-    100% { opacity:1; }
+    @keyframes transition {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
-    .delay-00 {opacity:0;animation: transition 0.2s ease-in-out 0.5s forwards;}
-    .delay-01 {opacity:0;animation: transition 0.2s ease-in-out 0.7s forwards;}
-    .delay-02 {opacity:0;animation: transition 0.2s ease-in-out 0.9s forwards;}
-    .delay-03 {opacity:0;animation: transition 0.2s ease-in-out 1.1s forwards;}
-    .delay-04 {opacity:0;animation: transition 0.2s ease-in-out 1.3s forwards;}
-    .delay-05 {opacity:0;animation: transition 0.2s ease-in-out 1.5s forwards;}
-    .delay-06 {opacity:0;animation: transition 0.2s ease-in-out 1.7s forwards;}
-    .delay-07 {opacity:0;animation: transition 0.2s ease-in-out 1.9s forwards;}
-    .delay-08 {opacity:0;animation: transition 0.2s ease-in-out 2.1s forwards;}
-    .delay-09 {opacity:0;animation: transition 0.2s ease-in-out 2.3s forwards;}
+
+    .delay-00 {
+        opacity: 0;
+        animation: transition 0.2s ease-in-out 0.5s forwards;
+    }
+
+    .delay-01 {
+        opacity: 0;
+        animation: transition 0.2s ease-in-out 0.7s forwards;
+    }
+
+    .delay-02 {
+        opacity: 0;
+        animation: transition 0.2s ease-in-out 0.9s forwards;
+    }
+
+    .delay-03 {
+        opacity: 0;
+        animation: transition 0.2s ease-in-out 1.1s forwards;
+    }
+
+    .delay-04 {
+        opacity: 0;
+        animation: transition 0.2s ease-in-out 1.3s forwards;
+    }
+
+    .delay-05 {
+        opacity: 0;
+        animation: transition 0.2s ease-in-out 1.5s forwards;
+    }
+
+    .delay-06 {
+        opacity: 0;
+        animation: transition 0.2s ease-in-out 1.7s forwards;
+    }
+
+    .delay-07 {
+        opacity: 0;
+        animation: transition 0.2s ease-in-out 1.9s forwards;
+    }
+
+    .delay-08 {
+        opacity: 0;
+        animation: transition 0.2s ease-in-out 2.1s forwards;
+    }
+
+    .delay-09 {
+        opacity: 0;
+        animation: transition 0.2s ease-in-out 2.3s forwards;
+    }
 }
 
 @mixin banner {

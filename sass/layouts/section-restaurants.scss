@@ -1,11 +1,12 @@
 .restaurants {
     display: flex;
     flex-direction: column;
-    background-color: lighten($background,95%);
+    background-color: lighten($background, 95%);
     padding-bottom: 7rem;
 
     & h3 {
         padding-left: 1rem;
+
         @media (min-width: 767px) {
             text-align: center;
         }
@@ -19,9 +20,11 @@
     gap: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+
     @media (max-width: 767px) {
         justify-content: center;
     }
+
     & a {
         text-decoration: none;
         color: black;
@@ -30,16 +33,18 @@
 
 .card {
     border-radius: 25px;
-    height: 14.5rem;
+    // height: 14.5rem;
     width: 23rem;
     background-color: white;
     @include border-shadows;
+
     & img {
         object-fit: cover;
         height: 10rem;
         width: 100%;
         border-radius: 25px 25px 0 0;
     }
+
     & h4 {
         margin-top: 0.5rem;
         padding-left: 1rem;
@@ -56,6 +61,7 @@
     background-size: cover;
     width: 100%;
     border-radius: 25px 25px 0 0;
+
     & p {
         display: flex;
         background-color: $color-tertiary;
@@ -87,6 +93,7 @@
     justify-content: space-between;
     gap: 3rem;
     position: relative;
+
     & i {
         font-size: larger;
         padding-right: 2rem;
@@ -96,16 +103,17 @@
 .heart-hover {
     color: transparent;
     background-image: linear-gradient(to top, $color-primary,
-    $color-secondary);
+            $color-secondary);
     -webkit-background-clip: text;
     background-clip: text;
     font-size: 1.005rem;
     opacity: 0;
     transition: 500ms ease-in-out;
-    position:absolute;
+    position: absolute;
     right: 0rem;
-    bottom: 1.95rem;  
+    bottom: 1.95rem;
+
     &:hover {
-    opacity: 1;
+        opacity: 1;
     }
 }

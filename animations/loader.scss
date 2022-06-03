@@ -1,79 +1,92 @@
 .font-loader {
-    position: fixed;
-    inset: 0;
-    background-color: rgb(255, 255, 255);
-    opacity: 0.93;
-    z-index: 1;
-    height: 100vh;
-    animation: depop 3s forwards;
+	position: fixed;
+	inset: 0;
+	background-color: rgb(255, 255, 255);
+	opacity: 0.93;
+	z-index: 1;
+	height: 100vh;
+	animation: depop 3s forwards;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    & .loader {
-        position: fixed;
-        inset : calc(50% - 50px);
-        
-#ballsWaveG{
-	display: flex;
-	align-items: center;
+
+	& .loader {
+		position: fixed;
+		inset: calc(50% - 50px);
+
+		#ballsWave {
+			display: flex;
+			align-items: center;
+		}
+
+		.ballsWave {
+			background-color: $color-tertiary;
+			width: 1rem;
+			height: 2.5rem;
+			animation-name: ballsWave;
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+			border-radius: 1rem;
+		}
+
+		div#ballsWave>.ballsWave:nth-child(even) {
+			margin: 5px;
+		}
+
+		#ballsWave_1 {
+			animation-delay: 0.68s;
+		}
+
+		#ballsWave_2 {
+			animation-delay: 0.85s;
+		}
+
+		#ballsWave_3 {
+			animation-delay: 1.02s;
+		}
+
+		#ballsWave_4 {
+			animation-delay: 1.19s;
+		}
+
+		#ballsWave_5 {
+			animation-delay: 1.36s;
+		}
+
+		#ballsWave_6 {
+			animation-delay: 1.53s;
+		}
+
+		#ballsWave_7 {
+			animation-delay: 1.7s;
+		}
+
+		#ballsWave_8 {
+			animation-delay: 1.87s;
+		}
+
+		@keyframes ballsWave {
+			0% {
+				background-color: $color-primary;
+			}
+
+			100% {
+				background-color: $color-secondary;
+			}
+		}
+
+		@keyframes depop {
+			to {
+				visibility: hidden;
+			}
+		}
+	}
 }
 
-.ballsWaveG{
-	background-color: $color-tertiary;
-	width: 1rem;
-	height: 2.5rem;
-	animation-name: ballsWaveG;
-	animation-duration: 1.5s;
-	animation-iteration-count: infinite;
-	border-radius: 1rem;
-}
-div#ballsWaveG >.ballsWaveG:nth-child(even) {
-	margin: 0px 5px;
-}
-#ballsWaveG_1{
-	animation-delay:0.68s;
-}
- #ballsWaveG_2{
-	animation-delay:0.85s;
-}
-#ballsWaveG_3{
-	animation-delay:1.02s;
-}
-#ballsWaveG_4{
-	animation-delay:1.19s;
-}
-#ballsWaveG_5{
-	animation-delay:1.36s;
-}
-#ballsWaveG_6{
-	animation-delay:1.53s;
-}
-#ballsWaveG_7{
-	animation-delay:1.7s;
-}
-#ballsWaveG_8{
-	animation-delay:1.87s;
-}
-@keyframes ballsWaveG{
-	0%{
-		background-color: $color-primary;
-	}
-	100%{
-		background-color: $color-secondary;
-	}
-}
-    }
-}
-
-@keyframes depop {
-    to {
-        visibility: hidden;
-    }
-}
 
 .loader-title {
-    font-family: "shrikhand", cursive;
-    font-size: 2rem;
-    color: darken($color-tertiary, 10%);
+	font-family: "shrikhand", cursive;
+	font-size: 2rem;
+	color: darken($color-tertiary, 10%);
 	margin-top: 5rem;
 }

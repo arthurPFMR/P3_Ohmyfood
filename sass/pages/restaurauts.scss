@@ -85,18 +85,15 @@
     border-radius: .75rem;
     margin: 1rem 0;
     box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, .1);
-    // white-space: nowrap;
     overflow: hidden;
     cursor: pointer;
-    // max-width: 980px;
     height: 4.5rem;
     @media (min-width: 767px){
         max-width: 15rem;
     }
     & .info-card {
-        flex: 1; //pas compris//
+        flex: 1;
         margin-top: -1.5rem;
-        // white-space: nowrap;
         overflow: hidden;
         & .descriptions-card {
             margin-top: -1rem;
@@ -140,11 +137,12 @@
 
 .main-card:hover .check {
     margin-right: -1rem;
+    transition-duration: 0.3s;
 }
 
 .main-card:hover .fa-check {
     transform: rotate(360deg);
-    transition-duration: 0.3s;
+    transition-duration: 0.6s;
 }
 
 .command {
@@ -162,7 +160,3 @@
         @include pop-up-color;
     }
 }
-
-// footer {
-//     margin-top: -2rem;
-// }

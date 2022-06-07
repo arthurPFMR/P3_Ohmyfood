@@ -33,7 +33,6 @@
 
 .card {
     border-radius: 25px;
-    // height: 14.5rem;
     width: 23rem;
     background-color: white;
     @include border-shadows;
@@ -102,10 +101,8 @@
 
 .heart-hover {
     color: transparent;
-    background-image: linear-gradient(to top, $color-primary,
-            $color-secondary);
+    background-image: linear-gradient(to top, $color-primary, $color-secondary);
     -webkit-background-clip: text;
-    background-clip: text;
     font-size: 1.005rem;
     opacity: 0;
     transition: 500ms ease-in-out;

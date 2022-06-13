@@ -325,7 +325,8 @@ footer a:hover {
   margin-top: -1rem;
 }
 
-.fa-hands-helping:before, .fa-handshake-angle:before {
+.fa-hands-helping:before,
+.fa-handshake-angle:before {
   content: "\f4c4";
   margin-right: -0.3rem;
   font-size: 0.9rem;
@@ -544,6 +545,7 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-duration: 0.5s;
 }
 .main-card .check i {
   background-color: white;
@@ -558,7 +560,6 @@ footer a:hover {
 
 .main-card:hover .check {
   margin-right: -1rem;
-  transition-duration: 0.3s;
 }
 
 .main-card:hover .fa-check {

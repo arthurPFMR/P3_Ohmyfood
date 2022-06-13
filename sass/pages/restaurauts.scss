@@ -24,14 +24,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
-    background-color: lighten($background,95);
+    background-color: lighten($background, 95);
     border-radius: 25px 25px 0 0;
     position: relative;
+
     & i {
         font-size: x-large;
         position: absolute;
         right: 1rem;
     }
+
     & h2 {
         font-family: "shrikhand", cursive;
         text-align: center;
@@ -42,40 +44,45 @@
 .heart-hover-menu {
     color: transparent;
     background-image: linear-gradient(to top, $color-primary,
-    $color-secondary);
+            $color-secondary);
     -webkit-background-clip: text;
     opacity: 0;
     transition: 500ms ease-in-out;
-    position:absolute;
+    position: absolute;
     right: 0rem;
-    bottom: 1.6rem;  
+    bottom: 1.6rem;
+
     &:hover {
-    opacity: 1;
+        opacity: 1;
     }
 }
 
 .main {
     @include animation-main;
-    background-color: lighten($background,95);
+    background-color: lighten($background, 95);
     padding-left: 1rem;
     padding-right: 1rem;
     display: flex;
     flex-direction: column;
+
     @media (min-width: 767px) {
         flex-direction: row;
         justify-content: center;
         gap: 1rem;
     }
+
     padding-bottom: 1.5rem;
+
     & h3 {
         font-weight: lighter;
         position: relative;
         margin-bottom: 1rem;
         margin-top: 2rem;
     }
+
     & h3::after {
         @include title-underline;
-    }    
+    }
 }
 
 .main-card {
@@ -88,25 +95,30 @@
     overflow: hidden;
     cursor: pointer;
     height: 4.5rem;
-    @media (min-width: 767px){
+
+    @media (min-width: 767px) {
         max-width: 15rem;
     }
+
     & .info-card {
         flex: 1;
         margin-top: -1.5rem;
         overflow: hidden;
+
         & .descriptions-card {
             margin-top: -1rem;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
         & .title-card {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
     }
+
     & .price {
         font-weight: 700;
         display: flex;
@@ -114,6 +126,7 @@
         align-items: flex-end;
         padding-left: 0.5rem;
     }
+
     & .check {
         background-color: $color-tertiary;
         margin: -1rem -5rem -1rem 1rem;
@@ -122,6 +135,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition-duration: 0.5s;
+
         & i {
             background-color: white;
             color: $color-tertiary;
@@ -137,7 +152,7 @@
 
 .main-card:hover .check {
     margin-right: -1rem;
-    transition-duration: 0.3s;
+    // transition-duration: 0.3s;
 }
 
 .main-card:hover .fa-check {
@@ -146,14 +161,16 @@
 }
 
 .command {
-    background-color: lighten($background,95);
+    background-color: lighten($background, 95);
     text-align: center;
     height: 100%;
     padding-bottom: 3rem;
+
     & button {
-    @include gradient-button;
-    @include border-shadows;
+        @include gradient-button;
+        @include border-shadows;
     }
+
     & button:hover {
         @include pop-up;
         @include border-shadows-hover;
